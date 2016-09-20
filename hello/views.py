@@ -8,8 +8,8 @@ from django.core.exceptions import ObjectDoesNotExist
 
 from .models import Game
 
-ALLOWED_TOKEN = "PPOQted1FDzSuPJYGdIwM6KN"
-ALLOWED_TEAM_IDS = set(["T2ATGN3PG"])
+ALLOWED_TOKEN = "PPOQted1FDzSuPJYGdIwM6KN" # Generated
+ALLOWED_TEAM_IDS = set(["T2ATGN3PG"]) # Allowed Team ID just Team 942
 
 NO_GAME_STRING = "No game in progress! Start one by typing in `/ttt @opponent`"
 

@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 class Game(models.Model):
     channel_id = models.CharField(max_length = 30, primary_key=True)
     player1 = models.CharField(max_length = 30)
