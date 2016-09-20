@@ -12,6 +12,7 @@ Options:
 `/ttt giveup`: Give up and let the other user win
 `/ttt help`: sends help to you just like this
 *SECRET*: You can also type in a single number to make a move on a cell to be quick. For example, for a 3x3 board, you can refer to cells the way you would on your phone's keypad, i.e.
+```
 |---|---|---|
 | 1 | 2 | 3 |
 |---+---+---|
@@ -19,6 +20,7 @@ Options:
 |---+---+---|
 | 7 | 8 | 9 |
 |---|---|---|
+```
 Your move would look like `/ttt 5` if you want to make a move in the center cell
 
 
