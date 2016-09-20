@@ -40,10 +40,10 @@ class Game(models.Model):
             self.save()
             if (self.has_won()):
                 self.delete()
-                return (player + " wins!")
+                return ("GAME OVER! " + player + " wins!")
             elif (self.all_slots_filled()):
                 self.delete()
-                return ("Match drawn")
+                return ("GAME OVER! Match drawn")
             return self.next_to_move + ", it's your turn"
         else:
             return "Space already occupied!"

@@ -127,7 +127,7 @@ def end_game_through_give_up(channel_id, loser):
             # to avoid concurrency issues (what if winner made a move
             # that won him before loser gave up)
             winner = validated.player1 if (validated.player2 == loser) else validated.player2
-            message = loser + " gave up, " + winner + " wins! \n"
+            message = "GAME OVER! " + loser + " gave up, " + winner + " wins! \n"
             validated.delete()
             return JsonResponse({
                 "response_type": "in_channel",
