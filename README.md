@@ -1,44 +1,24 @@
-# python-getting-started
+# tic-slack-toe
 
-A barebones Python app, which can easily be deployed to Heroku.
+The Heroku Python template was used as starter code to build this slash command.
 
-This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
+This is the server-side code to run the slash command, /ttt on slack channels. 
+There can only be one game at a time in a channel.
+Options:
+`/ttt @opponent`: start a new 3x3 tic-tac-toe game with opponent
+`/ttt @opponent size N`: start a new NxN tic-tac-toe game with opponent
+`/ttt whoseturn`: which user must play next
+`/ttt i,j`: Make a move at the cell in the i'th row and the j'th col
+`/ttt giveup`: Give up and let the other user win
+`/ttt help`: sends help to you just like this
+*SECRET*: You can also type in a single number to make a move on a cell to be quick. For example, for a 3x3 board, you can refer to cells the way you would on your phone's keypad, i.e.
+|---|---|---|
+| 1 | 2 | 3 |
+|---+---+---|
+| 4 | 5 | 6 |
+|---+---+---|
+| 7 | 8 | 9 |
+|---|---|---|
+Your move would look like `/ttt 5` if you want to make a move in the center cell
 
-## Running Locally
 
-Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
-
-```sh
-$ git clone git@github.com:heroku/python-getting-started.git
-$ cd python-getting-started
-
-$ pip install -r requirements.txt
-
-$ createdb python_getting_started
-
-$ python manage.py migrate
-$ python manage.py collectstatic
-
-$ heroku local
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-
-$ heroku run python manage.py migrate
-$ heroku open
-```
-or
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-## Documentation
-
-For more information about using Python on Heroku, see these Dev Center articles:
-
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
